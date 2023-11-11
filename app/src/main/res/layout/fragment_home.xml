@@ -23,7 +23,7 @@
 
             <TextView
                 android:id="@+id/greeteing_text"
-                android:layout_width="117dp"
+                android:layout_width="123dp"
                 android:layout_height="20dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
@@ -31,7 +31,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="9dp"
-                android:layout_marginEnd="264dp"
+                android:layout_marginEnd="258dp"
                 android:layout_marginBottom="75dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/greeting"
@@ -100,6 +100,20 @@
                 android:text="@string/home_ready_text"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="387dp"
+                android:layout_height="162dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/img_5072" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -128,6 +142,20 @@
                 android:text="@string/tips"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="391dp"
+                android:layout_height="165dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="-2dp"
+                android:src="@drawable/img_5073" />
         </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

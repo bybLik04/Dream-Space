@@ -11,4 +11,7 @@
     <string name="tips">Tips</string>
     <string name="add_dream">+ Add dream</string>
     <string name="search">Search</string>
+    <string name="version">Version 0.0.1</string>
+    <string name="dreamspace">DreamSpace</string>
+    <string name="settings_about">About</string>
 </resources>

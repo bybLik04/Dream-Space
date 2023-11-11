@@ -38,6 +38,26 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/about_btn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                app:icon="@drawable/info_24px"
+                app:iconTint="@color/white"
+                android:layout_width="373dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="141dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="27dp"
+                android:backgroundTint="#1e1d48"
+                android:gravity="center|left"
+                android:text="@string/settings_about"
+                android:textColor="@color/white" />
+
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
