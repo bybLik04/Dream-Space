@@ -3,4 +3,12 @@
     <string name="text_label_3">Settings</string>
     <string name="text_label_1">Home</string>
     <string name="text_label_2">Journal</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="greeting">Good afternoon</string>
+    <string name="user_name">Kirill</string>
+    <string name="home_ready_text">Get ready for sleep:</string>
+    <string name="tips">Tips</string>
+    <string name="add_dream">+ Add dream</string>
+    <string name="search">Search</string>
 </resources>
