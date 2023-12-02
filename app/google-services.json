@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "681977230656",
+    "project_id": "kp01-e96ea",
+    "storage_bucket": "kp01-e96ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681977230656:android:a220ce01febea3722936a5",
+        "android_client_info": {
+          "package_name": "com.example.dreamspace"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx_tOs8g-ilqnFUqvf_aFWfok3dgWIZZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
