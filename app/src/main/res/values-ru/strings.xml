@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DreamSpace</string>
+    <string name="text_label_3">Настройки</string>
+    <string name="text_label_1">Главная</string>
+    <string name="text_label_2">Журнал</string>
+    <string name="hello_blank_fragment">че</string>
+    <string name="greeting">Добрый день</string>
+    <string name="home_ready_text">Подготовьтесь ко сну:</string>
+    <string name="tips">Заметки</string>
+    <string name="add_dream">+ Добавить сон</string>
+    <string name="search">Поиск</string>
+    <string name="version">Версия 0.0.1</string>
+    <string name="dreamspace">DreamSpace</string>
+    <string name="settings_about">О приложении</string>
+    <string name="settings_notification">Уведомления</string>
+    <string name="signin">Войти с Google</string>
+    <string name="logout">Выйти из системы</string>
+    <string name="lang">Язык</string>
+    <string name="lang_settings">Языковые настройки</string>
+    <string name="ru">Русский</string>
+    <string name="en">Английский</string>
+    <string name="hint_title">Название</string>
+    <string name="hint_body">Пишите свой сон тут...</string>
+    <string name="save_dream">Сохранить</string>
+    <string name="type_1">Сон</string>
+    <string name="type_2">Кошмар</string>
+    <string name="user_name">Сонный</string>
+    <string name="me">"Дизайнер и разработчик:\nКирилл Рыхлов\nМои контакты:\nrihlov.kirill@gmail.com"</string>
+</resources>

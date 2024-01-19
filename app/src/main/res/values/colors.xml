@@ -3,5 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background_purple">#140e34</color>
+    <color name="button_purple">#1e1d48</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="button_red">#AC1C1C</color>
+    <color name="button_ripple_red">#5C0E0E</color>
+    <color name="textback_purple">#1A1439</color>
 </resources>

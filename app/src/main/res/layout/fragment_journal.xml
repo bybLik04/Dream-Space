@@ -57,6 +57,7 @@
             <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
 
             <com.google.android.material.appbar.AppBarLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="82dp"
                 android:layout_alignParentStart="true"
@@ -86,6 +87,15 @@
             android:src="@drawable/photo_2023_11_11_22_03_10"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="403dp"
+            android:layout_height="465dp"
+            android:layout_marginTop="208dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

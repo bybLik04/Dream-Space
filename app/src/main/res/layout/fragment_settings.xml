@@ -11,28 +11,67 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="218dp"
+            android:layout_width="412dp"
+            android:layout_height="366dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.025
-">
+            app:layout_constraintVertical_bias="0.031">
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/notification_btn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="373dp"
+                android:layout_height="62dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="271dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="33dp"
+                android:backgroundTint="@color/button_purple"
+                android:gravity="center|left"
+                android:text="@string/settings_notification"
+                android:textColor="@color/white"
+                app:icon="@drawable/notifications"
+                app:iconTint="@color/white" />
+
+            <Button
+                android:id="@+id/language_btn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="373dp"
+                android:layout_height="62dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="207dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="97dp"
+                android:backgroundTint="@color/button_purple"
+                android:gravity="center|left"
+                android:text="@string/lang"
+                android:textColor="@color/white"
+                app:icon="@drawable/lang"
+                app:iconTint="@color/white" />
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="136dp"
-                android:layout_height="45dp"
+                android:layout_width="178dp"
+                android:layout_height="42dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="29dp"
-                android:layout_marginEnd="255dp"
-                android:layout_marginBottom="144dp"
+                android:layout_marginEnd="214dp"
+                android:layout_marginBottom="295dp"
                 android:text="@string/text_label_3"
                 android:textColor="@color/white"
                 android:textSize="30sp"
@@ -41,10 +80,8 @@
             <Button
                 android:id="@+id/about_btn"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-                app:icon="@drawable/info_24px"
-                app:iconTint="@color/white"
-                android:layout_width="373dp"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="62dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
@@ -52,12 +89,30 @@
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="141dp"
                 android:layout_marginEnd="19dp"
-                android:layout_marginBottom="27dp"
-                android:backgroundTint="#1e1d48"
+                android:layout_marginBottom="162dp"
+                android:backgroundTint="@color/button_purple"
                 android:gravity="center|left"
                 android:text="@string/settings_about"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                app:icon="@drawable/info_24px"
+                app:iconTint="@color/white" />
 
         </RelativeLayout>
+
+        <Button
+            android:id="@+id/logout_btn"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="@string/logout"
+            android:textColor="@color/button_red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/button_ripple_red"
+            app:strokeColor="@color/button_red" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
