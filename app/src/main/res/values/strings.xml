@@ -4,8 +4,7 @@
     <string name="text_label_1">Home</string>
     <string name="text_label_2">Journal</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="greeting">Good afternoon</string>
+    <string name="greeting">Good Afternoon</string>
     <string name="home_ready_text">Get ready for sleep:</string>
     <string name="tips">Tips</string>
     <string name="add_dream">+ Add dream</string>
@@ -28,4 +27,19 @@
     <string name="type_2">Nightmare</string>
     <string name="user_name">Dreamy</string>
     <string name="me">Designer and Developer:\n Kirill Rykhlov\n Contact with me: rihlov.kirill@gmail.com</string>
+    <string name="dream_type">Type of dream:</string>
+    <string name="dream_rate">Dream score:</string>
+    <string name="evening">Good Evening</string>
+    <string name="night">Good Night</string>
+    <string name="morning">Good Morning</string>
+    <string name="auth_fail">Authentication failed.</string>
+    <string name="auth_succes">Authentication successful.</string>
+    <string name="fill_fields_err">Fill in all the fields!</string>
+    <string name="rate_err">Rate your sleep!</string>
+    <string name="type_err">Choose the type of sleep!</string>
+    <string name="add_dream_succes">Dream has been successfully added!</string>
+    <string name="add_dream_error">Error adding sleep</string>
+    <string name="google_signin_fail">Google sign in failed</string>
+    <string name="enter_name">Enter a name</string>
+    <string name="save">Save</string>
 </resources>

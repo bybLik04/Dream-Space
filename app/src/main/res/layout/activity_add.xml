@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddActivity"
-    android:background="@color/background_purple">
+    android:background="@color/background_purple"
+    tools:context=".AddActivity">
 
     <Button
         android:id="@+id/save_dream"
@@ -19,56 +19,55 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/white"
+        android:onClick="save"
         android:text="@string/save_dream"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="save"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/back_arrow"
         android:layout_width="33dp"
         android:layout_height="29dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="25dp"
         android:onClick="back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow_back_fill0_wght400_grad0_opsz24" />
+        app:srcCompat="@drawable/arrow_back" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="375dp"
         android:layout_height="69dp"
         android:layout_marginTop="72dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:boxStrokeColor= "@color/white"
-        app:hintTextColor="@color/white"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/text_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/textback_purple"
             android:hint="@string/hint_title"
-            android:textColor="@color/white"
-            android:background="@color/textback_purple"/>
+            android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
         android:layout_width="376dp"
         android:layout_height="388dp"
-        android:layout_marginTop="140dp"
         app:boxStrokeColor="@color/white"
         app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/text_body"
@@ -83,92 +82,93 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButtonToggleGroup
-        android:id="@+id/toggleButton"
+        android:id="@+id/rateToggleButton"
         android:layout_width="296dp"
         android:layout_height="50dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:singleSelection="true"
-        app:selectionRequired="true">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <Button
             android:id="@+id/button1"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:tag="1"
             android:text="1"
-            android:textColor="@color/white"
-            android:tag="1"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/button2"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:tag="2"
             android:text="2"
-            android:textColor="@color/white"
-            android:tag="2"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/button3"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:tag="3"
             android:text="3"
-            android:textColor="@color/white"
-            android:tag="3"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/button4"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:tag="4"
             android:text="4"
-            android:textColor="@color/white"
-            android:tag="4"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/button5"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="5"
-            android:textColor="@color/white"
             android:tag="5"
-            />
+            android:text="5"
+            android:textColor="@color/white" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/typeToggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="580dp"
-        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/rateToggleButton"
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
-        <RadioButton
-            android:id="@+id/rbtn_dream"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <Button
+            android:id="@+id/btn_type1"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:tag="1"
             android:text="@string/type_1"
-            android:textColor="@color/white"
-            android:textSize="8pt"
-            android:tag="1"/>
+            android:textColor="@color/white" />
 
-        <RadioButton
-            android:id="@+id/rbtn_nightmare"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <Button
+            android:id="@+id/btn_type2"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:tag="2"
             android:text="@string/type_2"
-            android:textColor="@color/white"
-            android:textSize="8pt"
-            android:tag="2"/>
-    </RadioGroup>
+            android:textColor="@color/white" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Dream implements Parcelable {
-
+    private String dreamId;
     private String title;
     private String body;
     private int rating;
@@ -11,7 +11,6 @@ public class Dream implements Parcelable {
     private String date;
 
     public Dream() {
-        // Конструктор без параметров обязателен для Firestore
     }
 
     public Dream(String title, String body, int rating, int type, String date) {
@@ -41,7 +40,12 @@ public class Dream implements Parcelable {
             return new Dream[size];
         }
     };
-
+    public String getDreamId() {
+        return dreamId;
+    }
+    public void setDreamId(String dreamId) {
+        this.dreamId = dreamId;
+    }
     public String getTitle() {
         return title;
     }

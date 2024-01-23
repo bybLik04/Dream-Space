@@ -17,13 +17,14 @@
             android:layout_height="104dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.025">
 
             <TextView
                 android:id="@+id/greeteing_text"
-                android:layout_width="123dp"
+                android:layout_width="151dp"
                 android:layout_height="20dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
@@ -31,7 +32,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="9dp"
-                android:layout_marginEnd="258dp"
+                android:layout_marginEnd="230dp"
                 android:layout_marginBottom="75dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/greeting"
@@ -58,16 +59,16 @@
 
             <Button
                 android:id="@+id/add_dream"
-                android:layout_width="wrap_content"
-                android:layout_height="47dp"
+                android:layout_width="188dp"
+                android:layout_height="51dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="218dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="49dp"
+                android:layout_marginStart="205dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="31dp"
                 android:backgroundTint="@color/white"
                 android:text="@string/add_dream"
                 android:textColor="@color/black"
@@ -102,7 +103,7 @@
                 android:textSize="18sp" />
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/randomDream_btn"
                 android:layout_width="387dp"
                 android:layout_height="162dp"
                 android:layout_alignParentStart="true"
@@ -128,23 +129,23 @@
 
             <TextView
                 android:id="@+id/tips_text"
-                android:layout_width="39dp"
-                android:layout_height="25dp"
+                android:layout_width="148dp"
+                android:layout_height="24dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="7dp"
-                android:layout_marginEnd="321dp"
-                android:layout_marginBottom="152dp"
+                android:layout_marginEnd="233dp"
+                android:layout_marginBottom="153dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/tips"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/notificationTip_btn"
                 android:layout_width="391dp"
                 android:layout_height="165dp"
                 android:layout_alignParentStart="true"

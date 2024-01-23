@@ -1,5 +1,7 @@
 package com.example.dreamspace;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,19 +28,20 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity implements DialogListener {
     private ActivityLoginBinding binding;
     private static final int RC_SIGN_IN = 123;
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
+    private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         mAuth = FirebaseAuth.getInstance();
 
-        // Настройки для аутентификации Google
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -47,11 +50,11 @@ public class LoginActivity extends BaseActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         mGoogleSignInClient.signOut();
 
-        binding.googleButton.setOnClickListener( view -> signInWithGoogle());
-
+        binding.googleButton.setOnClickListener(v -> {
+            signInWithGoogle();
+            Log.w("SignInActivity", "signInWithCredential:failure");
+        });
     }
-
-
 
     private void signInWithGoogle() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -69,7 +72,7 @@ public class LoginActivity extends BaseActivity {
                 firebaseAuthWithGoogle(account.getIdToken());
             } catch (ApiException e) {
                 Log.w("SignInActivity", "Google sign in failed", e);
-                Toast.makeText(this, "Google sign in failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.google_signin_fail), Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -81,28 +84,28 @@ public class LoginActivity extends BaseActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Успешная аутентификация, переходим на следующую активити
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(LoginActivity.this, "Authentication successful.", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                            finish();
+                            String user = mAuth.getCurrentUser().getUid();
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("Uid", user);
+                            editor.apply();
+                            Toast.makeText(LoginActivity.this, getString(R.string.auth_succes), Toast.LENGTH_SHORT).show();
+                            openDialog();
+
                         } else {
-                            // Если не удалось аутентифицироваться
                             Log.w("SignInActivity", "signInWithCredential:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, getString(R.string.auth_fail), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
 
-    public void SignInClick(View view) {
-        // Вызываем метод для входа через Google
-        binding.googleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signInWithGoogle();
-                Log.w("SignInActivity", "signInWithCredential:failure");
-            }
-        });
+    private void openDialog() {
+        MyDialog dialog = new MyDialog(this, sharedPreferences, this);
+        dialog.show();
+    }
+    @Override
+    public void onDataSaved() {
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        finish();
     }
 }
