@@ -53,7 +53,8 @@
             android:id="@+id/text_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/textback_purple"
+            android:elevation="4dp"
+            android:background="@drawable/rounded_background"
             android:hint="@string/hint_title"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -73,8 +74,9 @@
             android:id="@+id/text_body"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/textback_purple"
+            android:background="@drawable/rounded_background"
             android:gravity="start"
+            android:elevation="4dp"
             android:hint="@string/hint_body"
             android:inputType="textMultiLine"
             android:lines="20"

@@ -100,7 +100,6 @@ public class JournalFragment extends Fragment implements DreamClickListener {
     }
     @Override
     public void onDreamDeleteClick(Dream selectedDream) {
-        // Обработка удаления сна
         deleteDreamFromFirestore(selectedDream);
     }
     private void deleteDreamFromFirestore(Dream dream) {

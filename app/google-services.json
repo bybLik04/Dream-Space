@@ -14,11 +14,64 @@
       },
       "oauth_client": [
         {
+          "client_id": "681977230656-b60mv8cea1p5jc6c1kdk94cjgc413kce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dreamspace",
+            "certificate_hash": "6dc53d362a32bb807e6d0b46fa1678849f2727dd"
+          }
+        },
+        {
+          "client_id": "681977230656-p4uiugl6hg4sojqipvfiti60e5qlvd8h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dreamspace",
+            "certificate_hash": "e1de74d237b9ff7e311cbe65a9f7f4e28aab3259"
+          }
+        },
+        {
           "client_id": "681977230656-qol0i6qau4ormh0u017gvlhk217khor1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.dreamspace",
             "certificate_hash": "5493d3c6f8cd8c999aaa7e1b6cad2dd80d2ae6ea"
+          }
+        },
+        {
+          "client_id": "681977230656-kjui3j960tkoif1g96r9dngbt152ajak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx_tOs8g-ilqnFUqvf_aFWfok3dgWIZZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681977230656-kjui3j960tkoif1g96r9dngbt152ajak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681977230656:android:b6154f588f98438d2936a5",
+        "android_client_info": {
+          "package_name": "com.example.dreamspace2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681977230656-3tdtcfb5rn50nhr6lbtt7204t85rvm3i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dreamspace2",
+            "certificate_hash": "e1de74d237b9ff7e311cbe65a9f7f4e28aab3259"
           }
         },
         {

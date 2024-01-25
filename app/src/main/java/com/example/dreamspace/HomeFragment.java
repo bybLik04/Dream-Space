@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +16,9 @@ import android.widget.Button;
 
 import com.example.dreamspace.databinding.FragmentHomeBinding;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
@@ -44,7 +47,23 @@ public class HomeFragment extends Fragment {
             Intent intent = new Intent(getActivity(), AddActivity.class);
             startActivity(intent);
         });
+
+        binding.recyclerView2.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        List<TextData> textDataList = createTextDataList(); // Замените это на вашу логику загрузки данных из файла
+
+        HandbookAdapter handbookAdapter = new HandbookAdapter(textDataList, requireContext());
+        binding.recyclerView2.setAdapter(handbookAdapter);
+
         return view;
+    }
+
+    private List<TextData> createTextDataList() {
+        List<TextData> textDataList = new ArrayList<>();
+        textDataList.add(new TextData(getString(R.string.title1), getString(R.string.body1)));
+        textDataList.add(new TextData(getString(R.string.title2), getString(R.string.body2)));
+
+        return textDataList;
     }
 
     private void updateGreeting() {
